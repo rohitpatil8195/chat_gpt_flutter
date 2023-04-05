@@ -14,11 +14,10 @@ class Services{
       return Padding(
         padding: const EdgeInsets.all(18.0),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:  [
-            Flexible(
-                flex: 2,
-                child: TextWidget( myText:'Choose Model:',)),
-            const SizedBox(width: 10,),
+            TextWidget( myText:'Choose Model:',fontSizeCustom:15),
+             const SizedBox(width: 10,),
             const Flexible(child: ModalIsDropDownWidget())
           ],
         ),

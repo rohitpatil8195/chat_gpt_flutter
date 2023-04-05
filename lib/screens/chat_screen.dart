@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:api_flutter/widgets/chat_widgets.dart';
 
+import '../services/api_services.dart';
+
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
 
@@ -80,7 +82,13 @@ class _State extends State<ChatScreen> {
                      ),
                      ),
                      IconButton(
-                         onPressed: (){},
+                         onPressed: ()async{
+                           try{
+                           await ApiService.getModels();
+                           }catch(e){
+                             print('Error: $e');
+                           }
+                           },
                          icon:const Icon(Icons.send,color: Colors.white,
                          )
                      )

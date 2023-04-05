@@ -29,7 +29,8 @@ class ChatWidgets extends StatelessWidget {
                 Expanded(child:  TextWidget(myText: msg,)),
                 chatIndex==0 ?const SizedBox.shrink()
                     :
-                    Row(children:const [
+                    Row(
+                      children:const [
                         Icon(Icons.thumb_up_alt_outlined,color: Colors.white,),
                       SizedBox(width: 10,),
                       Icon(Icons.thumb_down_alt_outlined,color: Colors.white,)

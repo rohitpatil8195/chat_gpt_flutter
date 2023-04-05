@@ -9,6 +9,7 @@ class ChatWidgets extends StatelessWidget {
  final String msg;
  final int chatIndex;
 
+
   const ChatWidgets({super.key, required this.msg, required this.chatIndex});
   @override
   Widget build(BuildContext context) {

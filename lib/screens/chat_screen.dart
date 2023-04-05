@@ -1,6 +1,8 @@
 
 import 'package:api_flutter/constants/constants.dart';
 import 'package:api_flutter/services/assets_management.dart';
+import 'package:api_flutter/services/services.dart';
+import 'package:api_flutter/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:api_flutter/widgets/chat_widgets.dart';
@@ -25,7 +27,9 @@ class _State extends State<ChatScreen> {
      return Scaffold(
       appBar: AppBar(
         actions: [
-          IconButton(onPressed: (){},
+          IconButton(onPressed: ()async{
+          await Services.showModalSheet(context: context);
+          },
               icon:
               const Icon(Icons.more_vert_outlined,),)
         ],

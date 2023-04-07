@@ -1,4 +1,5 @@
 
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:api_flutter/constants/constants.dart';
 import 'package:api_flutter/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,9 @@ class ChatWidgets extends StatelessWidget {
                 chatIndex==0?AssetManager.userImage:AssetManager.chatLogo,
                 height: 30,width: 30,),
              const SizedBox(width: 10,),
-                Expanded(child:  TextWidget(myText: msg,)),
+                Expanded(child:TextWidget(myText: msg,)
+
+                ),
                 chatIndex==0 ?const SizedBox.shrink()
                     :
                     Row(
